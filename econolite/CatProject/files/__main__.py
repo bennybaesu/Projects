@@ -1,3 +1,11 @@
+# AUTHOR: BENJAMIN BAESU
+# DATE: Feb 5, 2020
+
+# DESCRIPTION: Read all ini files in a given directory. Command line program. Enter __main__.py <path> <keyword in .INI file>
+#                   Program will print each key word and the key, if found
+
+
+
 # IMPORT FILES-------------------------------
 import sys
 import os.path
