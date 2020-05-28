@@ -1,0 +1,41 @@
+Project 2 README
+
+CONTRIBUTORS:
+Benjamin Baesu - bbaesu@csu.fullerton.edu
+Chase Traver - chasetraver@csu.fullerton.edu
+
+PROGRAMMING LANGUAGE:
+This program was coded using C++ on Linux.
+
+HOW TO EXECUTE PROGRAM:
+1. Use a compiler to compile source code on a Linux system.
+2. Create an executable file from the compiled source code.
+3. In a Linux command line, type "./<filename>"". Be sure to include full path of the file.
+	In this case, our file is p2. So, we type in "./p2" to run the executable.
+4. The user is prompted to enter a memory size. No input below 0 or above 100,000 will be accepted.
+5. The user is prompted to enter an option for page size:
+	'1' for page size of 100
+	'2' for page size of 200
+	'3' for page size of 400
+6. The user will be asked to enter an input file. Enter the full file path. If the file is not
+	in the correct path, or if the program cannot recognize the entered file, the user will
+	be required to try again until a correct file has opened.
+7. The program will handle the memory details from the provided file, provided the input file
+	was written in the correct format.
+8. The page handling will be done by the file. Afterwards, the average turnaround time of the 
+	processes will be calculated and displayed to the user.
+* SCREENSHOTS OF TESTING ARE AVAILABLE WITHIN THIS FOLDER *
+
+CONTAINERS AND ITEMS USED:
+- The <string> library was used to handle string input from user.
+- The <fstream> library was used to open and read the <in.txt> file.
+- The <queue> library was used to handle input queues and main memory as queue objects
+- Queue was used to allow input queues to more efficienty be FCFS style inputs. That way, the front
+	of the input queue would be the next item that is up to be run when there is enough memory.
+
+CONTRIBUTIONS:
+Benny Baesu - Wrote code for user inputs, process management, clock management, turnaround time.
+Chase Traver - Worte code for page management, memory map displays, process addition from
+		input queues, and process removal from main memory maps.
+
+
