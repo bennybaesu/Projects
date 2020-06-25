@@ -20,7 +20,8 @@ pygame.display.set_caption('Color Dodge')
 clock = pygame.time.Clock()
 x_change = 0
 car_width = 200
-change_speed = 7
+original = 6
+change_speed = original
 score = 0
 goal = 3
 goal_current = 0
@@ -331,7 +332,7 @@ while running:
         score = 0
         goal = 3
         goal_current = 0
-        change_speed = 7
+        change_speed = original
         x_change = 0
         exploded = False
         game_start = True

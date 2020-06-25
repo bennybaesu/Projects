@@ -7,43 +7,43 @@ pygame.init()
 # IMAGE LOADING
 # ----------------------------------------------------------
 def rocket_image() -> object:
-    rocket: object = pygame.image.load("images/Rocket.png")
+    rocket: object = pygame.image.load("Images/Rocket.png")
     rocket = pygame.transform.scale(rocket, (200, 200))
     return rocket
 
 
 def explosion_image():
-    explosion: object = pygame.image.load("images/Explosion.png")
+    explosion: object = pygame.image.load("Images/Explosion.png")
     explosion = pygame.transform.scale(explosion, (200, 200))
     return explosion
 
 
 def asteroid_red():
-    asteroid: object = pygame.image.load("images/Asteroid_Red.png")
+    asteroid: object = pygame.image.load("Images/Asteroid_Red.png")
     asteroid = pygame.transform.scale(asteroid, (150, 150))
     return asteroid
 
 
 def asteroid_blue():
-    asteroid: object = pygame.image.load("images/Asteroid_Blue.png")
+    asteroid: object = pygame.image.load("Images/Asteroid_Blue.png")
     asteroid = pygame.transform.scale(asteroid, (150, 150))
     return asteroid
 
 
 def asteroid_yellow():
-    asteroid: object = pygame.image.load("images/Asteroid_Yellow.png")
+    asteroid: object = pygame.image.load("Images/Asteroid_Yellow.png")
     asteroid = pygame.transform.scale(asteroid, (150, 150))
     return asteroid
 
 
 def asteroid_green():
-    asteroid: object = pygame.image.load("images/Asteroid_Green.png")
+    asteroid: object = pygame.image.load("Images/Asteroid_Green.png")
     asteroid = pygame.transform.scale(asteroid, (150, 150))
     return asteroid
 
 
 def asteroid_purple():
-    asteroid: object = pygame.image.load("images/Asteroid_Purple.png")
+    asteroid: object = pygame.image.load("Images/Asteroid_Purple.png")
     asteroid = pygame.transform.scale(asteroid, (150, 150))
     return asteroid
 
@@ -53,7 +53,7 @@ def asteroid_purple():
 # ----------------------------------------------------------
 
 def click_sound():
-    click = pygame.mixer.Sound("sounds/click.wav")
+    click = pygame.mixer.Sound("Sounds/Click.wav")
     return click
 
 
