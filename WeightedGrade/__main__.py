@@ -1,52 +1,31 @@
-weightedGrade = 0
-partition = []
-worth = []
-received = []
-gradeInput = 0.00
-valid = False
+import functions
 
 while True:
-    if not valid:
-        partitionInput = input("Enter an assignment grouping (eg. 'Homework', 'Exams'...): ")
-        partition.append(partitionInput)
-    inputC = input("(E)nter another assignment grouping OR (C)ontinue: ")
-    if inputC == 'c' or inputC == 'C':
-        valid = True
+    print("----------------------------")
+    print("WELCOME TO GRADE MANAGER")
+    print("----------------------------")
+    print("\t------")
+    print("\t MENU")
+    print("\t------")
+    print("(1) - Weighted Grade Calculator")
+    print("(2) - GPA Calculator")
+    print("(3) - Final Grade Calculator")
+    print("(4) - Quit")
+
+    while True:
+        try:
+            choice = int(input("Enter menu option: "))
+            if choice < 1 or choice > 4:
+                raise ValueError
+            break
+        except ValueError:
+            print("That menu choice is not an option. Please try again.")
+
+    if choice == 1:
+        functions.weighted()
+    elif choice == 2:
+        print("That function doesn't exist yet. Coming soon.")
+    elif choice == 3:
+        print("That function doesn't exist yet. Coming soon.")
+    elif choice == 4:
         break
-    if inputC == 'e' or inputC == 'E':
-        valid = False
-    else:
-        print("That is an invalid option. Try again.")
-        valid = True
-
-print("\n")
-
-for i in range(0, len(partition)):
-    valid = False
-    while not valid:
-        gradeInput = float(input("Enter percentage worth for '" + partition[i] + "': "))
-        if 0.01 > gradeInput > 100:
-            print(partition[i] + " cannot be worth " + gradeInput + "%. Try again.")
-            valid = False
-        else:
-            valid = True
-            worth.append(gradeInput / 100)
-
-
-for i in range(0, len(partition)):
-    valid = False
-    while not valid:
-        gradeInput = float(input("Enter percentage received for '" + partition[i] + "': "))
-        if 0.00 > gradeInput:
-            print("We sure hope you didn't get a negative worth. Try again.")
-            valid = False
-        else:
-            valid = True
-            received.append(gradeInput)
-
-
-for i in range(0, len(partition)):
-    weightedGrade += (received[i] * worth[i])
-
-
-print("Your final grade is: " + str(weightedGrade) + "%\n")
