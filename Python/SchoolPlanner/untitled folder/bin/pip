@@ -1,4 +1,4 @@
-#!"/Users/Benny/Desktop/SchoolPlanner/untitled folder/bin/python"
+#!"/Users/Benny/Desktop/Projects/Python/SchoolPlanner/untitled folder/bin/python"
 # EASY-INSTALL-ENTRY-SCRIPT: 'pip==19.0.3','console_scripts','pip'
 __requires__ = 'pip==19.0.3'
 import re

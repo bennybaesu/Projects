@@ -1,20 +1,11 @@
 from tkinter import *
 
 import Fonts
-import FrameSwitch
 import CreateAccount
 
 
-def switch_frame(self, frame_class):
-    new_frame = frame_class(self)
-    if self._frame is not None:
-        self._frame.destroy()
-    self._frame = new_frame
-    self._frame.pack()
-
-
 class MainMenu(Frame):
-    def __init__(self, master):
+    def __init__(self, master, controller):
         Frame.__init__(self, master)
         self.root = master
         self.root.title("Benjamin's School Planner")
@@ -25,13 +16,13 @@ class MainMenu(Frame):
         app_width = 1000
         app_height = 500
 
-        screen_width = master.winfo_screenwidth()  # Get screen width
-        screen_height = master.winfo_screenheight()  # Get screen height
+        #screen_width = master.winfo_screenwidth()  # Get screen width
+        #screen_height = master.winfo_screenheight()  # Get screen height
 
-        x = int((screen_width / 2) - (app_width / 2))  # X coordinate to center application
-        y = int((screen_height / 2) - (app_height / 2))  # Y coordinate to center application
+        #x = int((screen_width / 2) - (app_width / 2))  # X coordinate to center application
+        #y = int((screen_height / 2) - (app_height / 2))  # Y coordinate to center application
 
-        master.geometry(f'{app_width}x{app_height}+{x}+{y}')  # Set master geometry
+        #master.geometry(f'{app_width}x{app_height}+{x}+{y}')  # Set master geometry
 
         # Set and display welcome message
         welcome_label = Label(self.root, text='Welcome to the School Planner', font=Fonts.welcomeFont())
@@ -56,9 +47,8 @@ class MainMenu(Frame):
 
         # Login button creation:
         login_button = Button(text='Login',
-                                 command=lambda: FrameSwitch.SampleApp.switch_frame(self.root,
-                                                                                    CreateAccount.CreateAccount),
-                                 bg='Gray', fg='Black', font=Fonts.loginFont())
+                              command=lambda: controller.show_frame("CreateAccount"),
+                              bg='Gray', fg='Black', font=Fonts.loginFont())
         login_button.place(relx=0.5, rely=0.62, anchor='center')
 
         # 'Show Password' Checkbox creation
@@ -72,8 +62,8 @@ class MainMenu(Frame):
                 password_entry.config(show="\u2022")
 
         show_password_checkbox = Checkbutton(master,
-                                                text="Show Password",
-                                                font=Fonts.showPasswordFont(),
-                                                variable=checkboxVar,
-                                                command=showPassword)
+                                             text="Show Password",
+                                             font=Fonts.showPasswordFont(),
+                                             variable=checkboxVar,
+                                             command=showPassword)
         show_password_checkbox.place(relx=0.5, rely=0.7, anchor='center')

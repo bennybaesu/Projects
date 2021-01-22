@@ -1,6 +1,8 @@
 from tkinter import *
 
 import mainMenu
+import CreateAccount
+
 
 class TkWindow:
     def __init__(self):
@@ -22,16 +24,21 @@ class TkWindow:
 
         self.master.geometry(self.dimensions)  # Set master geometry
 
-        self.mainMenu = mainMenu.MainMenu(self.master)
+        container = Frame(self.master, width=app_width, height=app_height, relief='raised', borderwidth=5)
 
-    def switch_frame(self, frame_class):
-        new_frame = frame_class(self)
-        if self._frame is not None:
-            self._frame.destroy()
-        self._frame = new_frame
-        self._frame.pack()
+        # self.currentFrame = Frames.main(self.master)
 
-    def start(self):
-        #self.switch_frame(self.mainMenu)
-        self.master.mainloop()
+        self.frames = {}
+        for F in (mainMenu.MainMenu, CreateAccount.CreateAccount):
+            page_name = F.__name__
+            frame = F(master=container.master, controller=self)
+            self.frames[page_name] = frame
 
+        self.show_frame("MainMenu")
+
+    def show_frame(self, page_name):
+        frame = self.frames[page_name]
+        frame.tkraise()
+
+    def getRoot(self):
+        return self.master
