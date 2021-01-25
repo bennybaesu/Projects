@@ -1,11 +1,17 @@
-try:
-    import tkinter as tk                # python 3
-    from tkinter import font as tkfont  # python 3
-except ImportError:
-    import Tkinter as tk     # python 2
-    import tkFont as tkfont  # python 2
+"""School Planner Application
+    Author: Benjamin Baesu
+    Language: Python 3
+    2021"""
+import tkinter as tk
+import tk_window
 
-import TkWindow
 
-app = TkWindow.TkWindow()
-app.getRoot().mainloop()
+def main():
+    """This application begins the loop that is used later in 'TkWindow'"""
+    root = tk.Tk()
+    tk_window.App(root)
+    root.mainloop()
+
+
+if __name__ == '__main__':
+    main()

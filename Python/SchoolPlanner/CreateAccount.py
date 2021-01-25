@@ -21,6 +21,6 @@ class CreateAccount(Frame):
 
         #master.geometry(f'{app_width}x{app_height}+{x}+{y}')  # Set master geometry
 
-        print("we got here")
-        welcome_label = Label(master, text='We made it', font=Fonts.welcomeFont())
-        welcome_label.pack()
+
+        welcome_label = Label(master, text='We made it to create account', font=Fonts.welcomeFont())
+        ##welcome_label.pack()

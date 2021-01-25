@@ -8,3 +8,7 @@ def loginFont():
 
 def showPasswordFont():
     return 'Avenir', 12
+
+
+def createAccountFont():
+    return 'Avenir', 15
