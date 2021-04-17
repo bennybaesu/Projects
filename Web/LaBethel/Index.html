@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+
+<html>
+  <head>
+    <title>Bethel Romanian Pentacostal Church</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" /> <!-- For dynamic screen capabilities -->
+
+    <link rel="stylesheet" type="text/css"  href="CSS/Style.css"> <!-- Main CSS Stylesheet -->
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> <!-- For Social Media Logos -->
+    <link href="CSS/hamburgers.css" rel="stylesheet"> <!-- For "Hamburger" Menu Icon -->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,800" rel="stylesheet"> <!-- For Montserrat Font -->
+
+    
+    <script src="JavaScript/Script.js"></script> <!-- Main JavaScript Script for buttons and more -->
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script> <!-- For CAPTCHA authentification -->
+</head>
+
+  <body>
+    <!--Original Dimensions: 268x80-->
+    <a id ="logo" href="https://labethel.com"><img src="Images/Bethel_Logo.png" alt="Bethel" width="120"></a> <!--Left Corner Logo-->
+
+
+
+    <!-- MAIN MENU BANNER -->
+    <nav class="navigation">
+      <ul>
+        <li id=spacer>labethel</li>
+        <li><a href="HTML/Donations.html">Donations</a></li>
+        <li><a href="HTML/About.html">About</a></li>
+        <li><a href="HTML/Services.html">Services</a></li>
+        <li><a href="Index.html" id="current">Home</a></li>
+      </ul>
+    </nav>
+
+    <!-- MENU BUTTON:-->
+    <button class="hamburger hamburger--slider" type="button" onclick="buttonFlip()">
+      <span class="hamburger-box">
+        <span class="hamburger-inner"></span>
+      </span>
+    </button>
+
+    <!--SECONDARY MENU BANNER-->
+    <div class="secondary" id="secondary">
+      <div class="secondaryColumns" id="column1">
+        <ul>
+          <li><a href="HTML/temp.html">Announcements</a></li>
+          <li><a href="HTML/temp.html">Ministries</a></li>
+          <li><a href="HTML/temp.html">Contact Us</a></li>
+          <li>
+            <ul class="social">
+              <li><a href="https://www.instagram.com/bethelyouth.oc/?hl=en" class="fa fa-instagram" target="_blank"></a></li>
+              <li><a href="https://vimeo.com/channels/bethelchurch" class="fa fa-vimeo" target="_blank"></a></li>
+              <li><a href="https://www.youtube.com/user/BRPCMediaTeam/feed" class="fa fa-youtube" target="_blank"></a></li>
+              <li><a href="https://www.facebook.com/BethelRomanianPentecostalChurch" class="fa fa-facebook" target="_blank"></a></li>
+            </ul>
+          </li>
+        </ul>
+      </div>
+      <div class="secondaryColumns" id="column2">
+        <!--TODO: Better algin service items with space between description-->
+        <dl>
+          <dt id="columnTitle">Service Times</li>
+          <dt><strong>Sunday</strong> - 10am | 6pm</li>
+          <dd>Sunday Service</li>
+
+          <dt><strong>Tuesday</strong> - 7pm</li>
+          <dd>Prayer Service</li>
+
+          <dt><strong>Thursday</strong> - 7pm</li>
+          <dd>Prayer & Bible Study</li>
+
+          <dt><strong>Friday</strong> - 7:30pm</li>
+          <dd>Youth Night</li>
+        </dl>
+      </div>
+      <div class="secondaryColumns" id="column3">
+        More
+      </div>
+    </div>
+
+    <br><br>
+
+    <h1>Latest Service</h1>
+
+    <!--Latest Video TODO: Get the latest video. If we're live, show the live video instead-->
+    <div class="video">
+      <iframe src="https://player.vimeo.com/video/512344089?title=0&byline=0&portrait=0" width="640" height="360" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    
+
+  </body>
+</html>
