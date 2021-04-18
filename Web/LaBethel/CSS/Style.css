@@ -41,6 +41,7 @@ nav ul {
 nav li {
     float: right;
     text-transform: lowercase;
+    transition: 0.3s;
     font-size: 18px;
     font-weight: 700;
     letter-spacing: 1pt;
@@ -158,23 +159,8 @@ nav a {
   }
   /***************************************/
 
-  
 
-  #logo {
-      float: left;
-      position: fixed;
-      z-index: 11;
-      top: 5px;
-      left: 10px;
-      flex-shrink: 1;
-  }
 
-  @media only screen and (max-width: 750px) {
-    #logo {
-        opacity: 0%;
-        transition: opacity 0.2s;
-    }
-}
 
 
   .navigation a {
@@ -317,3 +303,14 @@ nav a {
       padding: 10px;
       font-size: 25px;
   }
+
+/***************************************/
+/* SCREEN SPECIFIC */
+/***************************************/
+@media (max-width: 670px) { /* This is to get rid of the menu buttons on an Tablet or Phone*/ 
+  nav li {
+    visibility: hidden;
+    opacity: 0%;
+    transition: 0.3s;
+  }
+}
